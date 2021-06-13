@@ -1,6 +1,6 @@
 # OpenTelemetry Demo
 
-##Introduction
+## Introduction
 This repository contains a simple yet complete example of instrumenting your application for 
 [distributed tracing](https://opentracing.io/docs/overview/what-is-tracing/#:~:text=Distributed%20tracing%2C%20also%20called%20distributed,and%20what%20causes%20poor%20performance.) 
 with [opentelemetry](https://opentelemetry.io/). Examples included here will guide you to run a demo client-server communication 
