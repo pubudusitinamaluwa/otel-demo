@@ -1,0 +1,9 @@
+.idea
+
+otel-demo-client/.idea
+otel-demo-client/.gradle
+otel-demo-client/build
+
+otel-demo-server/.idea
+otel-demo-server/.gradle
+otel-demo-server/build

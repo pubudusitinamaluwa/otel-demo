@@ -1,0 +1,31 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+  zipkin:
+
+exporters:
+  jaeger_thrift:
+    url: "http://jaeger:14268/api/traces"
+  logging:
+  zipkin:
+    endpoint: "http://zipkin:9411/api/v2/spans"
+  otlp:
+    endpoint: ingest.lightstep.com:443
+    headers:
+      "lightstep-access-token": "REPLACE_WITH_YOUR_LIGHTSTEP_KEY"
+processors:
+  batch:
+
+extensions:
+  health_check:
+  pprof:
+  zpages:
+
+service:
+  extensions: [pprof, zpages, health_check]
+  pipelines:
+    traces:
+      receivers: [otlp, zipkin]
+      exporters: [zipkin, jaeger_thrift, otlp]
+      processors: [batch]

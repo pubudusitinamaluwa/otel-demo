@@ -1,0 +1,20 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.0'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'java'
+}
+
+group 'org.cs'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'io.opentelemetry', name: 'opentelemetry-api', version: '0.12.0'
+    compile group: 'io.opentelemetry', name: 'opentelemetry-sdk', version: '0.12.0'
+    compile group: 'io.opentelemetry', name: 'opentelemetry-exporter-otlp', version: '0.12.0'
+
+    compile group: 'io.grpc', name: 'grpc-netty-shaded', version: '1.34.0'
+}
